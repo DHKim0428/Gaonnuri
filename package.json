@@ -1,0 +1,23 @@
+{
+  "name": "gaonnuri",
+  "version": "1.0.0",
+  "description": "Gaonnuri Alert Bot",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DHKim0428/Gaonnuri.git"
+  },
+  "author": "DHKim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DHKim0428/Gaonnuri/issues"
+  },
+  "homepage": "https://github.com/DHKim0428/Gaonnuri#readme",
+  "engines": {
+    "node": "6.11.2"
+  }
+}
