@@ -5,7 +5,7 @@ var app = express();
 var bodyParser = require('body-parser');
 //app.use(express.static('public'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded);
+app.use(bodyParser.urlencoded());
 
 app.get('/', function (req, res) {
     //res.redirect('TntWkDiRn.html');
