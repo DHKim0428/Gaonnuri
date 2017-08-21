@@ -111,7 +111,7 @@ function sendGenericMessage(recipientId, messageText){
             }
         }
     };
-    
+
     callSendAPI(messageData);
 }
 
@@ -147,5 +147,5 @@ function callSendAPI(messageData){
 }
 
 http.createServer(app).listen(process.env.PORT || 8080, function () {
-   console.log('Server running at http://sugarcanesoft.iptime.org');
+   console.log('Server running at https://gaonnuri.herokuapp.com');
 });
