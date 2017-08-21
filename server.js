@@ -1,8 +1,8 @@
 // JavaScript source code
 var http = require('http');
-//var express = require('express');
-//var app = express();
-//app.use(express.static('public'));
+var express = require('express');
+var app = express();
+app.use(express.static('public'));
 
 app.get('/', function (req, res) {
     //res.redirect('TntWkDiRn.html');
