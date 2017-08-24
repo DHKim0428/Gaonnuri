@@ -77,7 +77,7 @@ function receivedPostback(event){
 
     var payload = event.postback.payload;
     console.log("Received postback for user %d and page %d with payload '%s' ", + "at %d", senderID, recipientID, payload, timeOfPostback);
-    sendTextMessage(senderId, "Postback called");
+    sendTextMessage(senderID, "Postback called");
 }
 
 function sendGenericMessage(recipientId, messageText){
