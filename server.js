@@ -33,7 +33,9 @@ app.post('/webhook', function(req, res){
             entry.messaging.forEach(function(event){
                 if(event.message){
                     receivedMessage(event);
-                }else{
+                }else if(event.postback){
+                    receivedPostback(event);
+                }{
                     console.log("Webhook received unknown event: ", event);
                 }
             })
@@ -66,6 +68,16 @@ function receivedMessage(event){
     }else if(messageAttachments){
         sendTextMessage(senderID, "Message with attachment received");
     }
+}
+
+function receivedPostback(event){
+    var senderID = event.sender.id;
+    var recipientID = event.recipient.id;
+    var timeOfPostback = event.timestamp;
+
+    var payload = event.postback.payload;
+    console.log("Received postback for user %d and page %d with payload '%s' ", + "at %d", senderID, recipientID, payload, timeOfPostback);
+    sendTextMessage(senderId, "Postback called");
 }
 
 function sendGenericMessage(recipientId, messageText){
